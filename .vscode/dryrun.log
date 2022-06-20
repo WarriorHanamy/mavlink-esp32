@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/rec/boost'
+make: Leaving directory '/home/rec/boost'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
