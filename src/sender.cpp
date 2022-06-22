@@ -1,5 +1,9 @@
 #include "UDPclient.cpp"
-
+#include <ros/ros.h>
+#include <eigen_conversions/eigen_msg.h>
+#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/TransformStamped.h>
+#include <mavros/frame_tf.h>
 using namespace TestUDP;
 namespace use{
 
@@ -18,92 +22,110 @@ class MocapSender
 private:
 	UDPClient client_;
 	mavlink::common::msg::ATT_POS_MOCAP pos;
+	ros::NodeHandle mpNdHandle_;
+	ros::Subscriber mpPoseSub_;
+	// ros::Subscriber mpTfSub_;
 public:
 	MocapSender(boost::asio::io_service &io_service_);
 	~MocapSender();
 
-	void sendMocapMessage(int);
-	void dataProcessing();
+	void sendMocapMessage();
+	void dataProcessing(const geometry_msgs::PoseStamped::ConstPtr &pose);
+
+// intialize will create a subscribe thread to deal with subscribtion
+	void intialize();
+	
 };
 
 MocapSender::MocapSender(boost::asio::io_service &io_service):
 	client_(io_service, DEFAULT_REMOTE_HOST, DEFAULT_REMOTE_PORT)
 {
 	SHOW("*****");
-	dataProcessing();
+	// dataProcessing();
 }
 MocapSender::~MocapSender()
 {
 }
 
-
-void MocapSender::sendMocapMessage(int time = 1000){
-	for(int i = 0; i < time; i++){
-	boost::this_thread::sleep(boost::posix_time::milliseconds(1));
+void MocapSender::sendMocapMessage()
+{
 	client_.send(&pos);
-	}
 }
 
-void MocapSender::dataProcessing(){
-	pos.x = 1 ;
-	pos.y = 1;
-	pos.z = 0;
+void MocapSender::dataProcessing(const geometry_msgs::PoseStamped::ConstPtr &pose){
+	ROS_INFO("get data %d", pose->header.seq);
+	Eigen::Quaterniond q_enu;
+	using namespace mavros;
+	tf::quaternionMsgToEigen(pose->pose.orientation, q_enu);
+	auto q = ftf::transform_orientation_enu_ned(
+		ftf::transform_orientation_baselink_aircraft(q_enu));
+
+	auto position = ftf::transform_frame_enu_ned(
+		Eigen::Vector3d(
+			pose->pose.position.x,
+			pose->pose.position.y,
+			pose->pose.position.z));
+
+	pos.time_usec = pose->header.stamp.toNSec() / 1000;
+	ftf::quaternion_to_mavlink(q, pos.q);
+	pos.x = position.x();
+	pos.y = position.y();
+	pos.z = position.z();
+
+	sendMocapMessage();
+}
+
+void MocapSender::intialize(){
+		// bool use_tf;
+		// bool use_pose;
+
+		mpPoseSub_ = mpNdHandle_.subscribe("/chatter", 1, &MocapSender::dataProcessing, this);
+
+		ros::spin();
+		/** @note For VICON ROS package, subscribe to TransformStamped topic */
+		// mpNdHandle_.param("use_tf", use_tf, false);
+
+		/** @note For Optitrack ROS package, subscribe to PoseStamped topic */
+		// mpNdHandle_.param("use_pose", use_pose, true);
+
+		// if (use_tf && !use_pose) {
+		// 	mocap_tf_sub = mp_nh.subscribe("tf", 1, &MocapPoseEstimatePlugin::mocap_tf_cb, this);
+		// }
+		// else if (use_pose && !use_tf) {
+		// 	mocap_pose_sub = mp_nh.subscribe("pose", 1, &MocapPoseEstimatePlugin::mocap_pose_cb, this);
+		// }
+		// else {
+		// 	ROS_ERROR_NAMED("mocap", "Use one motion capture source.");
+		// }
+		// if (use_tf && !use_pose) {
+		// 	// mpPoseSub_ = mpNdHandle_.subscribe("tf", 1, &MocapSender::dataProcessing, this);
+		// }
+		// else if (use_pose && !use_tf) {
+		// 	mpPoseSub_ = mpNdHandle_.subscribe("tf", 1, &MocapSender::dataProcessing, this);
+		// 	// mpTfSub_ = mpNdHandle_.subscribe("pose", 1, &MocapPoseEstimatePlugin::mocap_pose_cb, this);
+		// }
+		// else {
+		// 	ROS_ERROR_NAMED("mocap", "Use one motion capture source.");
+		// }
 }
 
 
 
-
-
-
-
 }
+
 
 int main(int argc, char **argv)
 {
 	//mpSender.sendMocapMessage();
+	ros::init(argc,argv,"MotionCaptureSender");
 	boost::asio::io_service io_service;
 	use::MocapSender mpSender(io_service);
-	mpSender.sendMocapMessage(atoi(argv[1]));
-	// UDPClient client(io_service, hostIP, hostPort);
-	// mavlink::common::msg::ATT_POS_MOCAP pos;
-
-
-	// for(int i = 0; i < 1000; i++){
-	// 	boost::this_thread::sleep(boost::posix_time::milliseconds(1));
-	// 	client.send(&pos);
-	// }
-	// SHOW(sizeof(mavlink::common::msg::ATT_POS_MOCAP));
-	// client.send(&pos);
-
-
 	
-	// ip::address addr = ip::address::from_string("127.0.0.1");
-	
-	// SHOW(ip::address::from_string);
+	mpSender.intialize();
+	// mpSender.sendMocapMessage(atoi(argv[1]));
 
-//    union {
-//       short s;
-//       char c[sizeof(short)];
-//    }un;
-	
-//    un.s = 0x0102;
-   
-//    if (sizeof(short) == 2) {
-//       if (un.c[0] == 1 && un.c[1] == 2)
-//          printf("big-endian\n");
-      
-//       else if (un.c[0] == 2 && un.c[1] == 1)
-//          printf("little-endian\n");
-      
-//       else
-//          printf("unknown\n");
-//    }
-//    else {
-//       printf("sizeof(short) = %d\n", sizeof(short));
-//    }
-// 	ip::udp::socket;
-// 	ip::tcp::socket;
-//    exit(0);
+
+
 
 }
 

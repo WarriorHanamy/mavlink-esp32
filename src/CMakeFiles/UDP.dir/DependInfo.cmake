@@ -10,14 +10,20 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
+  "ROS_PACKAGE_NAME=\"mocap\""
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/rec/catkin_ws/devel/include"
+  "/home/rec/catkin_ws/devel/.private/mavros_msgs/include"
   "/home/rec/catkin_ws/src/mavros/libmavconn/include"
+  "/home/rec/catkin_ws/src/mavros/mavros_msgs/include"
+  "/home/rec/catkin_ws/src/mavros/mavros/include"
   "/opt/ros/melodic/include"
+  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
   "/usr/include/eigen3"
   )

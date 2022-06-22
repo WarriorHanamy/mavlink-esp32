@@ -1,0 +1,2 @@
+beginner_tutorials
+-DCATKIN_DEVEL_PREFIX=/home/rec/MytestRos/devel -DCMAKE_INSTALL_PREFIX=/home/rec/MytestRos/install -G Unix Makefiles

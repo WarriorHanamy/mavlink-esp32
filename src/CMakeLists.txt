@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(mocap)
 find_package(catkin REQUIRED COMPONENTS
+    mavros
     libmavconn
     eigen_conversions
     geometry_msgs
     std_msgs
+    tf
+    roscpp
     tf2_eigen
 )
 

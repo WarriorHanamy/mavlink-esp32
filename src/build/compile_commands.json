@@ -1,20 +1,20 @@
 [
 {
   "directory": "/home/rec/boostCli/src/build",
-  "command": "/usr/bin/g++  -DROS_BUILD_SHARED_LIBS=1 -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3   -std=c++11 -pthread -g   -o CMakeFiles/test.dir/test.cpp.o -c /home/rec/boostCli/src/test.cpp",
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"mocap\\\" -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3   -std=c++11 -pthread -g   -o CMakeFiles/test.dir/test.cpp.o -c /home/rec/boostCli/src/test.cpp",
   "file": "/home/rec/boostCli/src/test.cpp"
 },
 
 {
   "directory": "/home/rec/boostCli/src/build",
-  "command": "/usr/bin/g++  -DROS_BUILD_SHARED_LIBS=1 -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3   -std=c++11 -pthread -g   -o CMakeFiles/sender.dir/sender.cpp.o -c /home/rec/boostCli/src/sender.cpp",
-  "file": "/home/rec/boostCli/src/sender.cpp"
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"mocap\\\" -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3   -std=c++11 -pthread -g   -o CMakeFiles/UDP.dir/UDPclient.cpp.o -c /home/rec/boostCli/src/UDPclient.cpp",
+  "file": "/home/rec/boostCli/src/UDPclient.cpp"
 },
 
 {
   "directory": "/home/rec/boostCli/src/build",
-  "command": "/usr/bin/g++  -DROS_BUILD_SHARED_LIBS=1 -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3   -std=c++11 -pthread -g   -o CMakeFiles/UDP.dir/UDPclient.cpp.o -c /home/rec/boostCli/src/UDPclient.cpp",
-  "file": "/home/rec/boostCli/src/UDPclient.cpp"
+  "command": "/usr/bin/g++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"mocap\\\" -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3   -std=c++11 -pthread -g   -o CMakeFiles/sender.dir/sender.cpp.o -c /home/rec/boostCli/src/sender.cpp",
+  "file": "/home/rec/boostCli/src/sender.cpp"
 },
 
 {
