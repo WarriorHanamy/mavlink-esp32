@@ -106,7 +106,7 @@ void MocapSender::intialize(){
 		// }
 		// else {
 		// 	ROS_ERROR_NAMED("mocap", "Use one motion capture source.");
-		// }
+
 }
 
 
@@ -120,11 +120,13 @@ int main(int argc, char **argv)
 	ros::init(argc,argv,"MotionCaptureSender");
 	boost::asio::io_service io_service;
 	use::MocapSender mpSender(io_service);
+	// mavlink::mavlink_message_t
+	// mpSender.intialize();
+
 	
-	mpSender.intialize();
 	// mpSender.sendMocapMessage(atoi(argv[1]));
 
-
+	//mavlink_msg_attitude_pack(1, 200, &msg, microsSinceEpoch(), 1.2, 1.7, 3.14, 0.01, 0.02, 0.03);
 
 
 }

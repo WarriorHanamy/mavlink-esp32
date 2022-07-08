@@ -19,6 +19,8 @@ stdlib.h
 -
 boost/chrono.hpp
 -
+mavconn/msgbuffer.h
+-
 
 /home/rec/boostCli/src/sender.cpp
 UDPclient.cpp
@@ -1748,6 +1750,12 @@ mavlink/v2.0/standard/standard.hpp
 mavlink/v2.0/uAvionix/uAvionix.hpp
 -
 mavlink/v2.0/ualberta/ualberta.hpp
+-
+
+/home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/msgbuffer.h
+cassert
+-
+mavconn/mavlink_dialect.h
 -
 
 /home/rec/catkin_ws/src/mavros/mavros/include/mavros/frame_tf.h

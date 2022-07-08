@@ -7,6 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/rec/boostCli/devel:$CMAKE_PREFIX_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/rec/boostCli/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export CMAKE_PREFIX_PATH="/home/rec/boostCli/src/devel:$CMAKE_PREFIX_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/rec/boostCli/src/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/rec/boostCli/src:$ROS_PACKAGE_PATH"

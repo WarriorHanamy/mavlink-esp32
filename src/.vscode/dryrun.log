@@ -3,29 +3,18 @@ make: Entering directory '/home/rec/boostCli/src'
 /usr/bin/cmake -H/home/rec/boostCli/src -B/home/rec/boostCli/src --check-build-system CMakeFiles/Makefile.cmake 0
 /usr/bin/cmake -E cmake_progress_start /home/rec/boostCli/src/CMakeFiles /home/rec/boostCli/src/CMakeFiles/progress.marks
 make -f CMakeFiles/Makefile2 all
+ 
 make[1]: Entering directory '/home/rec/boostCli/src'
-make -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
- 
-make[2]: Entering directory '/home/rec/boostCli/src'
-cd /home/rec/boostCli/src && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src/CMakeFiles/test.dir/DependInfo.cmake --color=
-make[2]: Leaving directory '/home/rec/boostCli/src'
-make -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-make[2]: Entering directory '/home/rec/boostCli/src'
-/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=16 "Building CXX object CMakeFiles/test.dir/test.cpp.o"
-/usr/bin/c++  -DROS_BUILD_SHARED_LIBS=1 -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3  -std=c++11 -pthread   -o CMakeFiles/test.dir/test.cpp.o -c /home/rec/boostCli/src/test.cpp
-/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=17 "Linking CXX executable test"
-/usr/bin/cmake -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=
-make[2]: Leaving directory '/home/rec/boostCli/src'
-/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=16,17 "Built target test"
 make -f CMakeFiles/sender.dir/build.make CMakeFiles/sender.dir/depend
- 
 make[2]: Entering directory '/home/rec/boostCli/src'
 cd /home/rec/boostCli/src && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src/CMakeFiles/sender.dir/DependInfo.cmake --color=
 make[2]: Leaving directory '/home/rec/boostCli/src'
 make -f CMakeFiles/sender.dir/build.make CMakeFiles/sender.dir/build
+ 
 make[2]: Entering directory '/home/rec/boostCli/src'
 /usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=14 "Building CXX object CMakeFiles/sender.dir/sender.cpp.o"
-/usr/bin/c++  -DROS_BUILD_SHARED_LIBS=1 -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3  -std=c++11 -pthread   -o CMakeFiles/sender.dir/sender.cpp.o -c /home/rec/boostCli/src/sender.cpp
+/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"mocap\" -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/devel/.private/mavros_msgs/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/home/rec/catkin_ws/src/mavros/mavros_msgs/include -I/home/rec/catkin_ws/src/mavros/mavros/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3  -std=c++11 -pthread   -o CMakeFiles/sender.dir/sender.cpp.o -c /home/rec/boostCli/src/sender.cpp
+ 
 /usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=15 "Linking CXX executable sender"
 /usr/bin/cmake -E cmake_link_script CMakeFiles/sender.dir/link.txt --verbose=
 make[2]: Leaving directory '/home/rec/boostCli/src'
@@ -38,12 +27,25 @@ make[2]: Leaving directory '/home/rec/boostCli/src'
 make -f CMakeFiles/UDP.dir/build.make CMakeFiles/UDP.dir/build
 make[2]: Entering directory '/home/rec/boostCli/src'
 /usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=1 "Building CXX object CMakeFiles/UDP.dir/UDPclient.cpp.o"
-/usr/bin/c++  -DROS_BUILD_SHARED_LIBS=1 -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3  -std=c++11 -pthread   -o CMakeFiles/UDP.dir/UDPclient.cpp.o -c /home/rec/boostCli/src/UDPclient.cpp
+/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"mocap\" -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/devel/.private/mavros_msgs/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/home/rec/catkin_ws/src/mavros/mavros_msgs/include -I/home/rec/catkin_ws/src/mavros/mavros/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3  -std=c++11 -pthread   -o CMakeFiles/UDP.dir/UDPclient.cpp.o -c /home/rec/boostCli/src/UDPclient.cpp
 /usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=2 "Linking CXX static library libUDP.a"
 /usr/bin/cmake -P CMakeFiles/UDP.dir/cmake_clean_target.cmake
 /usr/bin/cmake -E cmake_link_script CMakeFiles/UDP.dir/link.txt --verbose=
 make[2]: Leaving directory '/home/rec/boostCli/src'
 /usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=1,2 "Built target UDP"
+make -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
+ 
+make[2]: Entering directory '/home/rec/boostCli/src'
+cd /home/rec/boostCli/src && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src /home/rec/boostCli/src/CMakeFiles/test.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/rec/boostCli/src'
+make -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+make[2]: Entering directory '/home/rec/boostCli/src'
+/usr/bin/cmake -E cmake_echo_color --switch= --green --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=16 "Building CXX object CMakeFiles/test.dir/test.cpp.o"
+/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"mocap\" -I/home/rec/catkin_ws/devel/include -I/home/rec/catkin_ws/devel/.private/mavros_msgs/include -I/home/rec/catkin_ws/src/mavros/libmavconn/include -I/home/rec/catkin_ws/src/mavros/mavros_msgs/include -I/home/rec/catkin_ws/src/mavros/mavros/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/melodic/share/orocos_kdl/cmake/../../../include -I/usr/include/eigen3  -std=c++11 -pthread   -o CMakeFiles/test.dir/test.cpp.o -c /home/rec/boostCli/src/test.cpp
+/usr/bin/cmake -E cmake_echo_color --switch= --green --bold --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=17 "Linking CXX executable test"
+/usr/bin/cmake -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=
+make[2]: Leaving directory '/home/rec/boostCli/src'
+/usr/bin/cmake -E cmake_echo_color --switch= --progress-dir=/home/rec/boostCli/src/CMakeFiles --progress-num=16,17 "Built target test"
 make[1]: Leaving directory '/home/rec/boostCli/src'
 /usr/bin/cmake -E cmake_progress_start /home/rec/boostCli/src/CMakeFiles 0
 make: Leaving directory '/home/rec/boostCli/src'

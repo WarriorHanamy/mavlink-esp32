@@ -1,12 +1,12 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/rec/boostCli/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_fec74"
-[1/2] Building C object CMakeFiles/cmTC_fec74.dir/CheckSymbolExists.c.o
-[2/2] Linking C executable cmTC_fec74
-FAILED: cmTC_fec74 
-: && /usr/bin/gcc   -rdynamic CMakeFiles/cmTC_fec74.dir/CheckSymbolExists.c.o  -o cmTC_fec74   && :
-CMakeFiles/cmTC_fec74.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/ninja" "cmTC_7e5ea"
+[1/2] Building C object CMakeFiles/cmTC_7e5ea.dir/CheckSymbolExists.c.o
+[2/2] Linking C executable cmTC_7e5ea
+FAILED: cmTC_7e5ea 
+: && /usr/bin/gcc   -rdynamic CMakeFiles/cmTC_7e5ea.dir/CheckSymbolExists.c.o  -o cmTC_7e5ea   && :
+CMakeFiles/cmTC_7e5ea.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 ninja: build stopped: subcommand failed.
@@ -29,11 +29,11 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/rec/boostCli/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/ninja" "cmTC_80520"
-[1/2] Building C object CMakeFiles/cmTC_80520.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_80520
-FAILED: cmTC_80520 
-: && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=pthread_create  -rdynamic CMakeFiles/cmTC_80520.dir/CheckFunctionExists.c.o  -o cmTC_80520  -lpthreads && :
+Run Build Command:"/usr/bin/ninja" "cmTC_8b2f4"
+[1/2] Building C object CMakeFiles/cmTC_8b2f4.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_8b2f4
+FAILED: cmTC_8b2f4 
+: && /usr/bin/gcc -DCHECK_FUNCTION_EXISTS=pthread_create  -rdynamic CMakeFiles/cmTC_8b2f4.dir/CheckFunctionExists.c.o  -o cmTC_8b2f4  -lpthreads && :
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
 ninja: build stopped: subcommand failed.

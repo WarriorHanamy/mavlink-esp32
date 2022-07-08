@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
     tf
     roscpp
     tf2_eigen
+    mavlink
 )
 
 find_package(Boost REQUIRED COMPONENTS
@@ -16,7 +17,6 @@ find_package(Boost REQUIRED COMPONENTS
 	thread
 )
 
-message(WARNING "asdf ${mavlink_INCLUDE_DIRS}")
 include_directories(
     ${catkin_INCLUDE_DIRS}
     ${mavlink_INCLUDE_DIRS}
@@ -37,7 +37,7 @@ target_link_libraries(test
     ${UDP_LIBRARIES}
 )
 
-
+message(WARNING ${catkin_LIBRARIES})
 
 add_executable(sender sender.cpp)
 target_link_libraries(sender
@@ -45,6 +45,12 @@ target_link_libraries(sender
     ${catkin_LIBRARIES}
     ${UDP_LIBRARIES}
 )
+
+
+
+
+
+
 
 
 

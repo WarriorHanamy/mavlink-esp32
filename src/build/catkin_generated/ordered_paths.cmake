@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "/home/rec/catkin_ws/devel/.private/libmavconn/lib;/opt/ros/melodic/lib")
+set(ORDERED_PATHS "/home/rec/catkin_ws/devel/.private/mavros/lib;/home/rec/catkin_ws/devel/.private/libmavconn/lib;/opt/ros/melodic/lib")

@@ -378,4 +378,5 @@ CMakeFiles/UDP.dir/UDPclient.cpp.o: /home/rec/catkin_ws/devel/include/mavlink/v2
 CMakeFiles/UDP.dir/UDPclient.cpp.o: /home/rec/catkin_ws/devel/include/mavlink/v2.0/ualberta/ualberta.hpp
 CMakeFiles/UDP.dir/UDPclient.cpp.o: /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/interface.h
 CMakeFiles/UDP.dir/UDPclient.cpp.o: /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/mavlink_dialect.h
+CMakeFiles/UDP.dir/UDPclient.cpp.o: /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/msgbuffer.h
 

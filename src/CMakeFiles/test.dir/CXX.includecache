@@ -19,11 +19,15 @@ stdlib.h
 -
 boost/chrono.hpp
 -
+mavconn/msgbuffer.h
+-
 
 /home/rec/boostCli/src/test.cpp
 UDPclient.cpp
 /home/rec/boostCli/src/UDPclient.cpp
 boost/timer.hpp
+-
+bitset
 -
 
 /home/rec/catkin_ws/devel/include/mavlink/v2.0/ASLUAV/./mavlink_msg_asl_obctrl.hpp
@@ -1740,5 +1744,11 @@ mavlink/v2.0/standard/standard.hpp
 mavlink/v2.0/uAvionix/uAvionix.hpp
 -
 mavlink/v2.0/ualberta/ualberta.hpp
+-
+
+/home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/msgbuffer.h
+cassert
+-
+mavconn/mavlink_dialect.h
 -
 

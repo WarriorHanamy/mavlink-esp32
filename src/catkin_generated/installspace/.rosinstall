@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/rec/boostCli/install/setup.sh
+    local-name: /usr/local/setup.sh

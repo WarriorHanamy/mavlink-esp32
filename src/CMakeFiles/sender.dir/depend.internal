@@ -380,6 +380,7 @@ CMakeFiles/sender.dir/sender.cpp.o
  /home/rec/catkin_ws/devel/include/mavlink/v2.0/ualberta/ualberta.hpp
  /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/interface.h
  /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/mavlink_dialect.h
+ /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/msgbuffer.h
  /home/rec/catkin_ws/src/mavros/mavros/include/mavros/frame_tf.h
  /opt/ros/melodic/include/eigen_conversions/eigen_msg.h
  /opt/ros/melodic/include/geometry_msgs/Point.h

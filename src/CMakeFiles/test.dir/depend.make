@@ -379,4 +379,5 @@ CMakeFiles/test.dir/test.cpp.o: /home/rec/catkin_ws/devel/include/mavlink/v2.0/u
 CMakeFiles/test.dir/test.cpp.o: /home/rec/catkin_ws/devel/include/mavlink/v2.0/ualberta/ualberta.hpp
 CMakeFiles/test.dir/test.cpp.o: /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/interface.h
 CMakeFiles/test.dir/test.cpp.o: /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/mavlink_dialect.h
+CMakeFiles/test.dir/test.cpp.o: /home/rec/catkin_ws/src/mavros/libmavconn/include/mavconn/msgbuffer.h
 

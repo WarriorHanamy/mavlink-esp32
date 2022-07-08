@@ -17,6 +17,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/rec/catkin_ws/devel/share/libmavconn/cmake/libmavconn-extras.cmake"
   "/home/rec/catkin_ws/devel/share/libmavconn/cmake/libmavconnConfig-version.cmake"
   "/home/rec/catkin_ws/devel/share/libmavconn/cmake/libmavconnConfig.cmake"
+  "/home/rec/catkin_ws/devel/share/mavlink/cmake/mavlink-config.cmake"
   "/home/rec/catkin_ws/devel/share/mavros/cmake/mavrosConfig-version.cmake"
   "/home/rec/catkin_ws/devel/share/mavros/cmake/mavrosConfig.cmake"
   "/home/rec/catkin_ws/devel/share/mavros_msgs/cmake/mavros_msgs-msg-extras.cmake"
